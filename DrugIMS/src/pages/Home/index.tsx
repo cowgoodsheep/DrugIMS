@@ -84,7 +84,7 @@ const Home = () => {
                   paddingBlockStart: 12,
                 }}
               >
-                <div>© 2023 Made by LiuHaoyang</div>
+                <div>© 2023 CowGoodSheep</div>
               </div>
             );
           }}

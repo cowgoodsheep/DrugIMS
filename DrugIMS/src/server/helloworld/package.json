@@ -25,5 +25,8 @@
     "targets": [
       "node12-win-x64"
     ]
+  },
+  "devDependencies": {
+    "electron-builder": "^24.9.1"
   }
 }

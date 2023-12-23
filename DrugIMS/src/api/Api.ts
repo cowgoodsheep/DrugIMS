@@ -44,7 +44,8 @@ export const deleteDrug =async (drug_id) => {
   return data
 }
 export const repairDrug =async (postData) => {
-  const {stock_lower_limit,stock_upper_limit,price,drug_description,drug_id} = JSON.parse(localStorage.getItem('drugMsg'))
+  const {img,stock_lower_limit,stock_upper_limit,price,drug_description,drug_id} = JSON.parse(localStorage.getItem('drugMsg'))
+  postData.img = postData.img||img
   postData.stock_lower_limit = postData.stock_lower_limit||stock_lower_limit
   postData.stock_upper_limit = postData.stock_upper_limit||stock_upper_limit
   postData.price = postData.price||price

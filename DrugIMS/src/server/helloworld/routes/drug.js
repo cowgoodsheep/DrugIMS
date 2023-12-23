@@ -8,13 +8,13 @@ router.post('/getAll', async(req, res, next) => {
     res.json(data);
   });
   router.post('/addDrug', async(req, res, next) => {
-    const {drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price} = req.body
-  const data =await addDrug(drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price)
+    const {img,drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price} = req.body
+  const data =await addDrug(img,drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price)
     res.json(data);
   });
   router.post('/repairDrug', async(req, res, next) => {
-    const {stock_lower_limit,stock_upper_limit,price,drug_description,drug_id} = req.body
-  const data =await repairDrug(stock_lower_limit,stock_upper_limit,price,drug_description,drug_id)
+    const {img,stock_lower_limit,stock_upper_limit,price,drug_description,drug_id} = req.body
+  const data =await repairDrug(img,stock_lower_limit,stock_upper_limit,price,drug_description,drug_id)
     res.json(data);
   });
   router.post('/deleteDrug', async(req, res, next) => {

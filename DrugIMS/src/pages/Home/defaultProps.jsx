@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './vite.svg'
+import logo from './R-C.jpg'
 let userinfo = localStorage.getItem('userinfo')
 let role
 if((userinfo)){
@@ -17,7 +17,6 @@ const defaultProps = {
                 name: '用户信息',
                 access: 'canAdmin',
                 hideInMenu:role!=='管理员'
-
             },
             {
                 path: '/drug',
@@ -49,7 +48,6 @@ const defaultProps = {
                 name: '我的进货记录',
                 path: '/myinput',
                 hideInMenu:role!=='供应商'
-
             }, 
         ],
     },

@@ -111,8 +111,8 @@ const Page = () => {
   </Form>
       </Modal>
       <LoginFormPage
-        backgroundImageUrl="https://mdn.alipayobjects.com/huamei_gcee1x/afts/img/A*y0ZTS6WLwvgAAAAAAAAAAAAADml6AQ/fmt.webp"
-        backgroundVideoUrl="https://gw.alipayobjects.com/v/huamei_gcee1x/afts/video/jXRBRK_VAwoAAAAAAAAAAAAAK4eUAQBr"
+        backgroundImageUrl="https://www.freeimg.cn/i/2023/12/23/65867de19f3bf.jpg"
+        backgroundVideoUrl="https://cdn.pixabay.com/vimeo/482385047/57049.mp4?rendition=source&expiry=1703313004&hash=b9d133edee33954968b11111ecfd78aaad8c5b36"
         title="药品存销信息管理系统"
         containerStyle={{
           backgroundColor: 'rgba(0, 0, 0,0.65)',

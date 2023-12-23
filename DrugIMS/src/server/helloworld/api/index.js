@@ -94,9 +94,17 @@ const getAllDrug = (searchValue='') => {
     })
 }
     //添加药品信息
-const addDrug = (drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price) => {
-    const sql = `INSERT INTO drug_info (drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price) VALUES ('${drug_name}','${drug_description}','${manufacturer}','${unit}','${specification}',${stock_lower_limit},${stock_upper_limit},${price});
-    `
+const addDrug = (img,drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price) => {
+    var imgtemp="https://www.freeimg.cn/i/2023/12/23/65866f549d9da.jpg"
+    let sql
+    if (!img){
+        sql = `INSERT INTO drug_info (drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price,img) VALUES ('${drug_name}','${drug_description}','${manufacturer}','${unit}','${specification}',${stock_lower_limit},${stock_upper_limit},${price},"${imgtemp}");
+        `
+    }
+    else{
+        sql = `INSERT INTO drug_info (drug_name, drug_description, manufacturer, unit, specification, stock_lower_limit, stock_upper_limit, price,img) VALUES ('${drug_name}','${drug_description}','${manufacturer}','${unit}','${specification}',${stock_lower_limit},${stock_upper_limit},${price},"${img}");
+        `
+    }
     return new Promise((resolve,reject)=>{
         connection.query(sql,(err,result,yield)=>{
             if(err){
@@ -150,8 +158,8 @@ const getValue = (drug_id) => {
     })
 }
  //修改药品信息
- const repairDrug = (stock_lower_limit,stock_upper_limit,price,drug_description,drug_id) => {
-    const sql = `UPDATE drug_info SET stock_lower_limit=${stock_lower_limit},stock_upper_limit=${stock_upper_limit},price=${price},drug_description='${drug_description}' WHERE drug_id =${drug_id}`
+ const repairDrug = (img,stock_lower_limit,stock_upper_limit,price,drug_description,drug_id) => {
+    const sql = `UPDATE drug_info SET img='${img}',stock_lower_limit=${stock_lower_limit},stock_upper_limit=${stock_upper_limit},price=${price},drug_description='${drug_description}' WHERE drug_id =${drug_id}`
     return new Promise((resolve,reject)=>{
         connection.query(sql,(err,result,yield)=>{
             if(err){

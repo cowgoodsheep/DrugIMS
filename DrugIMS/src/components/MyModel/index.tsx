@@ -64,6 +64,7 @@ export default function MyModel() {
           </>)
         case 1:
           return (<>
+            <FormItem label='药品图片(链接)' name='img' need={false} type='string'></FormItem>
             <FormItem label='药品名称' name='drug_name' need={true} type='string'></FormItem>
             <FormItem label='药品说明' name='drug_description' need={true} type='string'></FormItem>
             <FormItem label='生产厂家' name='manufacturer' need={true} type='string'></FormItem>
@@ -89,6 +90,7 @@ export default function MyModel() {
             </>)
              case 3:
               return (<>
+                <FormItem label='药品图片' name='img'  type='string'></FormItem>
                 <FormItem label='药品数量下限' name='stock_lower_limit'  type='number'></FormItem>
                 <FormItem label='药品数量上限' name='stock_upper_limit'  type='number'></FormItem>
                 <FormItem label='药品单价' name='price'  type='number'></FormItem>

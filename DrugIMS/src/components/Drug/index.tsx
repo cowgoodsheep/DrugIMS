@@ -27,6 +27,14 @@ export default function Drug({ searchValue }:{searchValue:string}) {
        }
     const columns = [
         {
+            title: '药品图片',
+            // dataIndex: 'drug_id',
+            key: 'drug_pic',
+            fixed: 'left',
+            width: 120,
+            render:(_,record)=>(<img src={record.img} style={{width:'120px'}} id='imgPreview'></img>)
+        },
+        {
             title: '药品ID',
             dataIndex: 'drug_id',
             key: 'drug_id',

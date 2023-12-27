@@ -18,6 +18,7 @@ import type { CSSProperties } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register as  registerApi,login as loginApi} from '../../api/Api';
+import mp from './mp.mp4'
 const { Option } = Select;
 type LoginType = 'phone' | 'account';
 
@@ -112,7 +113,7 @@ const Page = () => {
       </Modal>
       <LoginFormPage
         backgroundImageUrl="https://www.freeimg.cn/i/2023/12/23/65867de19f3bf.jpg"
-        backgroundVideoUrl="https://cdn.pixabay.com/vimeo/482385047/57049.mp4?rendition=source&expiry=1703313004&hash=b9d133edee33954968b11111ecfd78aaad8c5b36"
+        backgroundVideoUrl={mp}
         title="药品存销信息管理系统"
         containerStyle={{
           backgroundColor: 'rgba(0, 0, 0,0.65)',

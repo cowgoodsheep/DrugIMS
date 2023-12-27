@@ -90,7 +90,7 @@ export default function MyModel() {
             </>)
              case 3:
               return (<>
-                <FormItem label='药品图片' name='img'  type='string'></FormItem>
+                <FormItem label='药品图片(链接)' name='img'  type='string'></FormItem>
                 <FormItem label='药品数量下限' name='stock_lower_limit'  type='number'></FormItem>
                 <FormItem label='药品数量上限' name='stock_upper_limit'  type='number'></FormItem>
                 <FormItem label='药品单价' name='price'  type='number'></FormItem>
